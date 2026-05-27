@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+<h1>this is profile page</h1>
+<h1>user name : {{name}}</h1>
+{% if marks > 90 %}
+<h1>grade A</h1>
+{% elif marks > 75 %}
+<h1>grade B</h1>
+{% else %}
+<h1>fail</h1>
+{% endif %}
+<table border="2">
+    <tr>
+        <th> name</th>
+        <th>email</th>
+    </tr>
+    {% for data in user_data %}
+    <tr>
+        <td> {{data.name}}</td>
+        <td>{{data.email}}</td>
+    </tr>
+    {% endfor %}
+
+
+
+</table>
+
+{% for i in range %}
+<h1> count of i: {{i}}</h1>
+{% endfor %}
+
+</body>
+</html>
